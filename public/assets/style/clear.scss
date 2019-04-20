@@ -1,0 +1,30 @@
+// clear Style
+h1,h2,h3,h4,h5,ul,ol,li,p,input,a,span,b,i{
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6,b{
+  font-weight: normal;
+}
+ul,ol,li{
+  list-style: none;
+}
+i{
+  font-style: normal;
+}
+a{
+  color: #2e3135;
+  text-decoration: none;
+}
+html,body{
+  font-family: "-apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Arial,sans-serif";
+  color: #2e3135;
+  padding: 0;
+  margin: 0;
+}
+button{
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
