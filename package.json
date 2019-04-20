@@ -1,7 +1,6 @@
 {
   "name": "img-drawing",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -19,5 +18,17 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "description": "基于 vue + element-ui 的图片标记功能",
+  "main": "src/components/drawing/index.vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cp0725/img-drawing.git"
+  },
+  "author": "changpei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cp0725/img-drawing/issues"
+  },
+  "homepage": "https://github.com/cp0725/img-drawing#readme"
 }
