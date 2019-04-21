@@ -101,3 +101,7 @@ export default {
 </style>
 
 ```
+
+运行Demo  
+`cd ./node_modules/img-drawing`  
+`npm run start`
