@@ -8,16 +8,16 @@
   <div>
     <ul class="img-list">
       <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_01.jpeg')">编辑图片img_01（800 × 500）</span>
-        <img src="/assets/images/img_01.jpeg" alt="img_01">
+        <span class="title" @click="openDrawing('assets/images/img_01.jpeg')">编辑图片img_01（800 × 500）</span>
+        <img src="assets/images/img_01.jpeg" alt="img_01">
       </li>
       <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_02.jpeg')">编辑图片img_02（720 × 926）</span>
-        <img src="/assets/images/img_02.jpeg" alt="img_02">
+        <span class="title" @click="openDrawing('assets/images/img_02.jpeg')">编辑图片img_02（720 × 926）</span>
+        <img src="assets/images/img_02.jpeg" alt="img_02">
       </li>
       <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_03.jpeg')">编辑图片img_03（1600 × 1200）</span>
-        <img src="/assets/images/img_03.jpeg" alt="img_03">
+        <span class="title" @click="openDrawing('assets/images/img_03.jpeg')">编辑图片img_03（1600 × 1200）</span>
+        <img src="assets/images/img_03.jpeg" alt="img_03">
       </li>
     </ul>
     <div>
