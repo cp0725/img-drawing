@@ -2,38 +2,22 @@
 
 ![](./public/assets/images/banner.png)
 
-***主要功能并不依赖element-ui***
+> 主要功能并不依赖element-ui
 
 <br/>
 
-### demo
-安装   
+**安装**   
 `npm i img-drawing --save`   
 
-引用
+**引用**
 ```
 <template>
   <div>
-    <ul class="img-list">
-      <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_01.jpeg')">编辑图片img_01（800 × 500）</span>
-        <img src="/assets/images/img_01.jpeg" alt="img_01">
-      </li>
-      <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_02.jpeg')">编辑图片img_02（720 × 926）</span>
-        <img src="/assets/images/img_02.jpeg" alt="img_02">
-      </li>
-      <li class="img-item">
-        <span class="title" @click="openDrawing('/assets/images/img_03.jpeg')">编辑图片img_03（1600 × 1200）</span>
-        <img src="/assets/images/img_03.jpeg" alt="img_03">
-      </li>
-    </ul>
-    <div>
-      <img class="imgBase64" :src="imgBase64" v-show="imgBase64" alt="imgBase64">
-    </div>
+    <el-button @click="openDrawing">开始画图</el-button>
     <div class="drawing-wrap" v-if="drawingStatus">
-      <img-drawing :url="drawingUrl" @closeDrawing="closeDrawing"></img-drawing>
+      <img-drawing :url="imgUrl" @closeDrawing="closeDrawing"></img-drawing>
     </div>
+    <img :src="imgBase64" v-show="imgBase64">
   </div>
 </template>
 
@@ -43,16 +27,16 @@ export default {
   data() {
     return {
       drawingStatus: false,
-      drawingUrl: '',
       imgBase64: ''
     }
   },
   methods: {
-    openDrawing(url){
-      this.drawingUrl = url
+    openDrawing(){
+      this.imgUrl = '/assets/images/img_03.jpeg'
       this.drawingStatus = true
     },
     closeDrawing(imgBase64){
+      console.log(imgBase64 ? '用户点击了保存' : '用户点击了取消')
       this.imgBase64 = imgBase64
       this.drawingStatus = false      
     }
@@ -64,31 +48,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.img-list{
-  padding: 50px;
-  .img-item{
-    display: flex;
-    align-items: center;
-    padding: 6px;
-    border: 1px solid #ccc;
-    &:hover{
-      background: #fafafa;
-    }
-    .title{
-      width: 250px;
-      cursor: pointer;
-      &:hover{
-        color: royalblue;
-      }
-    }
-    img{
-      max-height: 80px;
-    }
-  }
-}
-.imgBase64{
-  max-width: 800px;
-}
 .drawing-wrap{
   position: fixed;
   left: 0;
@@ -96,12 +55,14 @@ export default {
   top: 0; 
   bottom: 0; 
   z-index: 2000;
-  /* z-index: 2000是个合适的值可以刚好不覆盖elementUi的组件 */
+  /* z-index: 2000是个合适的值可以刚好不覆盖elementUi */
 }
 </style>
-
 ```
 
-运行Demo  
+**运行DEMO**  
 `cd ./node_modules/img-drawing`  
 `npm run start`
+
+**关于跨域**
+图片的读写已经设置 `image.crossOrigin = 'anonymous'` 但是由于服务端的限制依然可能存在跨域的问题，出现跨域请联系服务端开放相应限制。
