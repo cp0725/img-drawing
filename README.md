@@ -58,7 +58,7 @@ export default {
   top: 0; 
   bottom: 0; 
   z-index: 2000;
-  /* z-index: 2000是个合适的值可以刚好不覆盖elementUi */
+  /* z-index: 2000是个合适的值可以刚好不覆盖elementUi */
 }
 </style>
 ```
