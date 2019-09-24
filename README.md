@@ -6,10 +6,13 @@
 
 <br/>
 
+**DEMO**     
+https://github.com/cp0725/img-drawing
+
 **安装**   
 `npm i img-drawing --save`   
 
-**引用**
+**使用**
 ```
 <template>
   <div>
@@ -64,5 +67,5 @@ export default {
 `cd ./node_modules/img-drawing`  
 `npm run start`
 
-**关于跨域**
-图片的读写已经设置 `image.crossOrigin = 'anonymous'` 但是由于服务端的限制依然可能存在跨域的问题，出现跨域请联系服务端开放相应限制。
+**关于跨域**     
+图片的读写已经设置 `image.crossOrigin = 'anonymous'` 但是由于服务端的限制依然可能存在跨域的问题，出现跨域请联系服务端开放相应限制。
