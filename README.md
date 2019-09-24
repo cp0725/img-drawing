@@ -7,7 +7,7 @@
 <br/>
 
 **DEMO**     
-https://github.com/cp0725/img-drawing
+https://cp0725.github.io/img-drawing/dist/index.html
 
 **安装**   
 `npm i img-drawing --save`   
